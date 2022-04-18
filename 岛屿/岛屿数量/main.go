@@ -4,6 +4,7 @@ func main() {
 
 }
 
+// 时间复杂度：O(M*N)，M和N分别为行数和列数
 func numIslands(grid [][]byte) int {
 	m := len(grid)
 	n := len(grid[0])
