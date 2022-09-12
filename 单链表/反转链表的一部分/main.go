@@ -30,6 +30,7 @@ func reverseBetween(head *ListNode, left int, right int) *ListNode {
 		cur.Next = cur.Next.Next
 		// 不能是 removed.Next = cur, 否则解答错误
 		// 第一次没问题，当cur往后走了很远的时候，cur就不是guard后面一个了。因为guard是固定的，cur是不断移动的
+		// 下面这两句顺序不能变
 		removed.Next = guard.Next
 		guard.Next = removed
 	}
